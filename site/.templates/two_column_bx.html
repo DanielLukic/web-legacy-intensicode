@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<%
+#	sections = list_file_names "#{relative_root}/Section.*"
+#	sections.map! { |name| name.sub /.*Section\./, '' }
+	sections = [ 'Links', 'Books', nil, 'J2ME', 'Symbian', nil, 'TFDJ', 'Bx', 'Contact' ]
+
+	current_section_id = current_section.downcase
+	self.long_section_name = current_section unless long_section_name
+
+	section_background_image = make_image_file_name "section_#{current_section_id}_name.gif"
+
+	default_background = make_image_file_name "no_section_name.gif"
+
+	page[ :FooterLeft ] = "LAST UPDATE: #{date current_file.ctime}" unless page[ :FooterLeft ]
+	page[ :FooterRight ] = "#{dunkelgold}" unless page[ :FooterRight ]
+
+	images = File.join relative_root, 'images'
+%>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+    <meta http-equiv="Language" content="en"/>
+
+    <meta name="Description" content="The.Berlin.Factor Homepage"/>
+    <meta name="Author" content="The.French.DJ"/>
+    <meta name="Generator" content="BxMSv2"/>
+    <meta name="Keywords" content="Berlin,Software,Development,C++,Java,Symbian,Series 60"/>
+    <meta name="Resource-Type" content="document"/>
+    <meta name="Robots" content="follow"/>
+
+    <title> :: Bx :: <%= long_section_name %> :: </title>
+
+    <link rel="stylesheet" type="text/css" href="<%=relative_root%>/Bx.css"/>
+    <script type="text/javascript" language="JavaScript" src="<%=relative_root%>/Bx.js"/>
+
+  </head>
+
+  <body id="body">
+
+    <div id="frame">
+
+      <div id="header">
+
+        <div id="logo">
+          <div id="logo_above"><img src="<%=images%>/logo_above.gif" width="380" height="8" alt="Upper logo part"/></div>
+          <div id="logo_clickable"><a href="<%=relative_root%>/index.html"><img src="<%=images%>/logo_clickable.gif" width="380" height="38" alt="The.Berlin.Factor Software.Development"/></a></div>
+          <div id="logo_below"><img src="<%=images%>/logo_below.gif" width="380" height="137" alt="Lower logo part"/></div>
+        </div>
+
+        <div id="sections">
+          <div id="section_name">
+            <img name="section_name" src="<%=default_background%>" alt="No section selected"/>
+          </div>
+          <div id="section_menu">
+<%	sections.each do |section|
+		next unless section
+		section_id = section.downcase
+		section_title = section.upcase + ".SECTION"
+  		if section != current_section %>
+            <span class="section_menu_entry"><a href="<%=relative_root%>/Section.<%=section%>/index.html"
+             onmouseover="select_section( '<%=images%>', '<%=section_id%>', '<%=section_title%>' )"
+             onmouseout="unselect_section( '<%=images%>', '<%=section_id%>', '<%=default_background%>' )"
+             ><img src="<%=images%>/section_<%=section_id%>.gif" name="section_<%=section_id%>" alt="<%=section_title%>"/></a></span>
+<%else%>
+            <span class="section_menu_entry"><img src="<%=images%>/section_<%=section_id%>_hover.gif" name="section_<%=section_id%>" alt="<%=section_title%>"/></span>
+<%		end
+	end %>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="page_body">
+        <div id="column_left"><%=page[ :LeftPane ]%></div>
+        <div id="column_right"><%=page[ :RightPane ]%></div>
+      </div>
+
+      <div id="footer">
+        <div id="footer_left"><%=page[ :FooterLeft ]%></div>
+        <div id="footer_right"><%=page[ :FooterRight ]%></div>
+      </div>
+
+    </div>
+
+<%=page[ :BodyTail ]%>
+  </body>
+
+</html>

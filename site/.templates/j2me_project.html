@@ -1,0 +1,55 @@
+raise "Missing project_name parameter" unless project_name
+layout '.templates/two_column_bx.html', :current_section => "J2ME :: #{project_name}"
+
+[Screenshots:ERB]
+<%
+    screenshots = list_file_names 'images/*'
+    screenshots.each do |screenshot|
+%>
+      <div class="project_screenshot">
+        <img src="<%= screenshot %>"/>
+      </div>
+<%
+    end
+%>
+
+[Downloads:ERB]
+<%
+    releases = list_folders '????-??-??'
+    releases.reverse!
+    releases.each do |release|
+%>
+      <%= subsubsection " :: #{release} :: " %>
+<%
+      files = list_file_names "#{release}/*"
+      files.map! { |f| f.sub "#{release}/", '' }
+
+      files.each do |file|
+%>
+        <div class="project_download">
+          <%= released_download release, file %>
+        </div>
+<%
+      end
+    end
+%>
+
+[LeftPane]
+    div_start 'project_details'
+      div_start 'project_screenshots'
+        subsection ' :: SCREENSHOTS :: '
+        page[ :Screenshots ]
+      div_end
+      div_start 'project_downloads'
+        subsection ' :: DOWNLOADS :: '
+        page[ :LatestDownloads ]
+      div_end
+      div_start 'project_notes'
+        subsection ' :: NOTES :: '
+        text 'Sources, JAD and JAR files included in the ZIPs!', 'project_note'
+      div_end
+      div_start 'project_downloads'
+        subsection ' :: RELEASES :: '
+        page[ :Downloads ]
+      div_end
+    div_end

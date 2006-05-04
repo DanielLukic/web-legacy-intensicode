@@ -1,0 +1,5 @@
+CVS		ignore
+news.txt	ignore
+*.page		process_page
+*.js		process
+*		copy

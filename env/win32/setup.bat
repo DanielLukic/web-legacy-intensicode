@@ -1,0 +1,12 @@
+@ECHO OFF
+
+SET ENV=%~dp0
+SET ENVNIX=%ENV:\=/%
+
+SET BASE=%ENV%..\..
+SET BASENIX=%BASE:\=/%
+
+SET RUBYHOME=%ENV%ruby
+SET RUBYOPT=rubygems
+
+SET PATH=.;%ENV%\bin;%ENV%\ext;%RUBYHOME%\bin;%PATH%

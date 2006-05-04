@@ -1,0 +1,75 @@
+layout '.templates/two_column_bx.html', :current_section => "Symbian :: #{page[ :ProjectName ]}"
+
+[ProjectName:RUBY]
+	default_name = dotted_name( File.basename( File.dirname( current_file_name ) ) )
+	project_name ? project_name : default_name
+
+[Screenshots:ERB]
+<%
+    screenshots = list_file_names 'screenshots/*'
+    screenshots.each do |screenshot|
+%>
+      <span class="project_screenshot">
+        <img src="<%= screenshot %>"/>
+      </span>
+<%
+    end
+%>
+
+[Releases:ERB]
+<%
+    releases = list_folders '????-??-??'
+    releases.reverse!
+    releases.each do |release|
+%>
+      <%= subsubsection " :: #{release} :: " %>
+<%
+      files = list_file_names "#{release}/*"
+      files.map! { |f| f.sub "#{release}/", '' }
+
+      files.each do |file|
+%>
+        <div class="project_download">
+          <%= released_download release, file %>
+        </div>
+<%
+      end
+    end
+%>
+
+[OptionalScreenshots]
+    div_start 'project_screenshots'
+      subsection ' :: SCREENSHOTS :: '
+      page[ :Screenshots ]
+    div_end
+
+[OptionalDownloads]
+    div_start 'project_downloads'
+      subsection ' :: DOWNLOADS :: '
+      page[ :Downloads ]
+    div_end
+
+[OptionalCredits]
+    div_start 'project_credits'
+      subsection ' :: CREDITS :: '
+      page[ :Credits ]
+    div_end
+
+[OptionalReleases]
+    div_start 'project_downloads'
+      subsection ' :: RELEASES :: '
+      page[ :Releases ]
+    div_end
+
+[LeftPane]
+    div_start 'project_details'
+      page[ :OptionalScreenshots ] unless part_empty? :Screenshots
+      page[ :OptionalDownloads ] unless part_empty? :Downloads
+      page[ :OptionalCredits ] unless part_empty? :Credits
+      page[ :OptionalReleases ] unless part_empty? :Releases
+    div_end
+
+[RightPane]
+    headline long_section_name.upcase
+    page[ :RightPaneContent ]
+    link_back
