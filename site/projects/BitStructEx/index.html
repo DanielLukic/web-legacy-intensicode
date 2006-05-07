@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
+    <meta http-equiv="language" content="en" />
+
+    <meta name="description" content="IntensiCode Homepage" />
+    <meta name="author" content="The.French.DJ" />
+    <meta name="resource-type" content="document" />
+    <meta name="robots" content="follow" />
+
+    <title> :: IntensiCode :: BitStructEx :: </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css" />
+  </head>
+
+  <body>
+
+    <h1 class="sectiontitle"><a class="BlackLink" href="../../index.html">www.intensicode.net</a> >>>
+    <a class="BlackLink" href="../index.html">Projects</a> >>> BitStructEx</h1>
+
+    <h2>Info</h2>
+    <p>
+      Alternative "BitStruct" implementation with less features than <a href="http://raa.ruby-lang.org/project/bit-struct"/>bit-struct</a>, but with support for unaligned nested structures.
+    </p>
+    <p>
+      The idea is to give you a simple DSL to specify bit structures like this:
+    </p>
+    <pre class="CodeBlock"><code>
+class Flags < StructBase
+	unsigned :direction, 4
+	unsigned :multiplier, 2
+	unsigned :offset, 2
+end
+
+class Entry < StructBase
+	unsigned :offset, 4
+	nested   :flags, Flags
+	unsigned :address, 24
+	unsigned :cache_id, 16
+	text     :packet_name, 32
+end
+    </code></pre>
+    <p>
+      It is then possible to access byte data like this:
+    </p>
+    <pre class="CodeBlock"><code>
+some_data = read_from_a_file_for_example
+
+entry = Entry.new some_data
+offset = entry.offset
+
+flags = entry.flags
+direction = flags.direction
+
+puts entry.packet_name
+
+etc.
+    </code></pre>
+    <p>
+      The project is hosted on <a href="http://rubyforge.org/projects/bit-struct-ex/">RubyForge</a>.
+    </p>
+
+  <hr>
+  <p class="footer">Last Update: 2006-05-07</p>
+
+  </body>
+
+</html>
