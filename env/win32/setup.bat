@@ -6,6 +6,8 @@ SET ENVNIX=%ENV:\=/%
 SET BASE=%ENV%..\..
 SET BASENIX=%BASE:\=/%
 
+SET SCRIPTS=%ENV%..\scripts
+
 SET RUBYHOME=%ENV%ruby
 SET RUBYOPT=rubygems
 
