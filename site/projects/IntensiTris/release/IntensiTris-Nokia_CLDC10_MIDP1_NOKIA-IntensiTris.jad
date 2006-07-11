@@ -1,0 +1,10 @@
+MIDlet-Vendor: IntensiCode
+MIDlet-Jar-URL: IntensiTris-Nokia_CLDC10_MIDP1_NOKIA-IntensiTris.jar
+MIDlet-Version: 1.0
+MIDlet-Name: IntensiTris
+MIDlet-Icon: /icon.png
+MIDlet-1: IntensiTris, /icon.png, net.intensicode.IntensiTris
+Nokia-MIDlet-Category: Game
+MIDlet-Jar-Size: 147971
+MicroEdition-Configuration: CLDC-1.0
+MicroEdition-Profile: MIDP-1.0

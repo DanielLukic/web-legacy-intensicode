@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+    <meta http-equiv="language" content="en"/>
+
+    <meta name="resource-type" content="document"/>
+    <meta name="robots" content="follow"/>
+
+    <title> :: IntensiCode :: IntensiTris :: </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css"/>
+</head>
+
+<body>
+
+<h1 class="sectiontitle">
+    <a class="BlackLink" href="../../index.html">IntensiCode</a>
+    >>> <a class="BlackLink" href="../index.html">Projects</a>
+    >>> IntensiTris</h1>
+
+
+<h2>Description</h2>
+
+<p>
+    Simple Tetris clone. Implemented only the basic game play. No FX and no hiscore, etc.
+</p>
+
+
+<h2>Credits</h2>
+
+<p>
+    Using <a href="http://www.bbc.co.uk/science/space/images/wallpaper/blackhole_small.jpg">this</a>
+    BBC wallpaper for the background. Using an outdated and slightly changed version of
+    <a href="http://kobjects.sourceforge.net/me4se/">ME4SE</a> to run the MIDlet on J2SE.
+</p>
+
+<h2>Screenshots</h2>
+
+<table class="Tight" cellspacing="10px">
+  <tr>
+	<td style="padding:5px;"><a class="BlackLink" href="screenshots/Title.png"><img src="screenshots/Title.png" width="100" /></a></td>
+	<td style="padding:5px;"><a class="BlackLink" href="screenshots/Start.png"><img src="screenshots/Start.png" width="100" /></a></td>
+	<td style="padding:5px;"><a class="BlackLink" href="screenshots/Detonate1.jpg"><img src="screenshots/Detonate1.jpg" width="100" /></a></td>
+	<td style="padding:5px;"><a class="BlackLink" href="screenshots/Detonate2.jpg"><img src="screenshots/Detonate2.jpg" width="100" /></a></td>
+  </tr>
+  <tr>
+	<td class="Caption">Title screen</td>
+	<td class="Caption">Start</td>
+	<td class="Caption">Before detonation</td>
+	<td class="Caption">After detonation</td>
+  </tr>
+</table>
+
+<h2>J2SE</h2>
+
+<h3 class="Tight"> :: <a href="IntensiTris.jnlp">IntensiTris WebStart</a> :: Run IntensiTris via Java Web Start :: </h3>
+
+<h3 class="Tight"> :: <a href="applet.html">IntensiTris Applet</a> :: Run IntensiTris inside your browser :: </h3>
+
+<h3>Controls</h3>
+
+<table style="margin:2em;margin-top:0;border:solid;" border="1">
+    <tr><td>Key</td><td>Function</td></tr>
+    <tr><td>UP</td><td>Rotate tile</td></tr>
+    <tr><td>DOWN</td><td>Move tile down</td></tr>
+    <tr><td>LEFT/RIGHT</td><td>Move tile left/right</td></tr>
+    <tr><td>SPACE</td><td>Drop tile</td></tr>
+    <tr><td>COMMA</td><td>Left softkey (bottom left menu action)</td></tr>
+    <tr><td>DOT</td><td>Right softkey (bottom right menu action)</td></tr>
+</table>
+
+
+<h2>J2ME</h2>
+
+<p>
+    <strong>NOTE:</strong> All versions assume a screen size of 176x208 pixels.
+    The engine will, however, adapt the screen layout as good as possible to
+    the device specific screen size. Unfortunately this results in several
+    GFX/UI glitches.
+</p>
+
+<p>
+    If you want a build for your specific phone and/or screen size just send
+    me an email to IntensiTris AT IntensiCode DOT com. I'll see what I can do
+    for you. (Or just wait until I have released this thing on JavaForge and
+    then use it to build a device-specific version yourself.)
+</p>
+
+<p>
+    Reference build for a generic CLDC10 MIDP2 J2ME device.
+</p>
+
+<h3 class="Tight"> :: <a href="release/IntensiTris-Generic_CLDC10_MIDP2-SimpleTris.jad">JAD</a> :: <a href="release/IntensiTris-Generic_CLDC10_MIDP2-SimpleTris.jar">JAR</a> :: Simple Edition :: </h3>
+<h3 class="Tight"> :: <a href="release/IntensiTris-Generic_CLDC10_MIDP2-IntensiTris.jad">JAD</a> :: <a href="release/IntensiTris-Generic_CLDC10_MIDP2-IntensiTris.jar">JAR</a> :: Fancy Edition :: </h3>
+<h3 class="Tight"> :: <a href="release/IntensiTris-Generic_CLDC10_MIDP2-IntensiTres.jad">JAD</a> :: <a href="release/IntensiTris-Generic_CLDC10_MIDP2-IntensiTres.jar">JAR</a> :: IntensiTres Edition :: </h3>
+
+<p>
+    Reference build for a NOKIA UI compatible CLDC10 MIDP2 J2ME device.
+    (This includes Sony Ericsson devices like K750, K700, etc.)
+</p>
+
+<h3 class="Tight"> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP2_NOKIA-SimpleTris.jad">JAD</a> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP2_NOKIA-SimpleTris.jar">JAR</a> :: Simple Edition :: </h3>
+<h3 class="Tight"> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP2_NOKIA-IntensiTris.jad">JAD</a> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP2_NOKIA-IntensiTris.jar">JAR</a> :: Fancy Edition :: </h3>
+<h3 class="Tight"> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP2_NOKIA-IntensiTres.jad">JAD</a> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP2_NOKIA-IntensiTres.jar">JAR</a> :: IntensiTres Edition :: </h3>
+
+<p>
+    Experimental build for a NOKIA UI compatible CLDC10 MIDP1 J2ME device.
+    This has some serious issues because of missing alpha support.
+</p>
+
+<h3 class="Tight"> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP1_NOKIA-SimpleTris.jad">JAD</a> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP1_NOKIA-SimpleTris.jar">JAR</a> :: Simple Edition :: </h3>
+<h3 class="Tight"> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP1_NOKIA-IntensiTris.jad">JAD</a> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP1_NOKIA-IntensiTris.jar">JAR</a> :: Fancy Edition :: </h3>
+<h3 class="Tight"> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP1_NOKIA-IntensiTres.jad">JAD</a> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP1_NOKIA-IntensiTres.jar">JAR</a> :: IntensiTres Edition :: </h3>
+
+<h3>Controls</h3>
+
+<table style="margin:2em;margin-top:0;border:solid;" border="1">
+    <tr><td>Key</td><td>Function</td></tr>
+    <tr><td>UP or 2</td><td>Rotate tile</td></tr>
+    <tr><td>DOWN or 8</td><td>Move tile down</td></tr>
+    <tr><td>LEFT/RIGHT or 4/6</td><td>Move tile left/right</td></tr>
+    <tr><td>STAR</td><td>Drop tile</td></tr>
+    <tr><td>LEFT SOFKEY</td><td>Left softkey (bottom left menu action)</td></tr>
+    <tr><td>RIGHT SOFTKEY</td><td>Right softkey (bottom right menu action)</td></tr>
+</table>
+
+
+<h2>History</h2>
+
+<h3>2006/07/07</h3>
+<ul>
+    <li>Project page created</li>
+</ul>
+
+<hr>
+
+<p class="footer">Last Update: 2006-07-07 or later :)</p>
+
+</body>
+
+</html>
