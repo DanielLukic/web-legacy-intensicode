@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+    <meta http-equiv="language" content="en"/>
+
+    <meta name="resource-type" content="document"/>
+    <meta name="robots" content="follow"/>
+
+    <title> :: IntensiCode :: IntensiTris :: HiScores :: </title>
+    <link rel="stylesheet" type="text/css" href="../../../style.css"/>
+    <link rel="stylesheet" type="text/css" href="hiscore.css"/>
+</head>
+
+<body>
+
+<h1 class="sectiontitle">
+    <a class="BlackLink" href="../../../index.html">IntensiCode</a>
+    >>> <a class="BlackLink" href="../../index.html">Projects</a>
+    >>> <a class="BlackLink" href="../index.html">IntensiTris</a>
+    >>> Hiscore</h1>
+
+<% each_hiscore do |hiscore| %>
+
+    <h2><%=hiscore.name%></h2>
+
+    <table class="HiscoreTable">
+    <% hiscore.each_rank do |rank| %>
+        <tr><td class="Score"><%=rank.score%></td><td class="Level"><%=rank.level%></td><td class="Name"><%=rank.name%></td></tr>
+    <% end %>
+    </table>
+
+<% end %>
+
+</body>
+
+</html>

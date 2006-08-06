@@ -11,6 +11,7 @@
 
     <title> :: IntensiCode :: IntensiTris :: </title>
     <link rel="stylesheet" type="text/css" href="../../style.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 
 <body>
@@ -20,57 +21,68 @@
     >>> <a class="BlackLink" href="../index.html">Projects</a>
     >>> IntensiTris</h1>
 
-
 <h2>Description</h2>
 
 <p>
-    Simple Tetris clone. Implemented only the basic game play. No FX and no hiscore, etc.
+    Simple Tetris clone with 'detonate tile' feature. Includes an online hiscore.
 </p>
-
 
 <h2>Credits</h2>
 
 <p>
-    Using <a href="http://www.bbc.co.uk/science/space/images/wallpaper/blackhole_small.jpg">this</a>
-    BBC wallpaper for the background. Using an outdated and slightly changed version of
-    <a href="http://kobjects.sourceforge.net/me4se/">ME4SE</a> to run the MIDlet on J2SE.
+    Using a <a href="http://www.bbc.co.uk/science/space/images/wallpaper/blackhole_small.jpg">BBC wallpaper</a>
+    for the background in the IntensiTris and WebTris version.
 </p>
 
 <h2>Screenshots</h2>
 
 <table class="Tight" cellspacing="10px">
-  <tr>
-	<td style="padding:5px;"><a class="BlackLink" href="screenshots/Title.png"><img src="screenshots/Title.png" width="100" /></a></td>
-	<td style="padding:5px;"><a class="BlackLink" href="screenshots/Start.png"><img src="screenshots/Start.png" width="100" /></a></td>
-	<td style="padding:5px;"><a class="BlackLink" href="screenshots/Detonate1.jpg"><img src="screenshots/Detonate1.jpg" width="100" /></a></td>
-	<td style="padding:5px;"><a class="BlackLink" href="screenshots/Detonate2.jpg"><img src="screenshots/Detonate2.jpg" width="100" /></a></td>
-  </tr>
-  <tr>
-	<td class="Caption">Title screen</td>
-	<td class="Caption">Start</td>
-	<td class="Caption">Before detonation</td>
-	<td class="Caption">After detonation</td>
-  </tr>
+    <tr>
+        <td style="padding:5px;"><a class="BlackLink" href="screenshots/Title.png"
+        ><img src="screenshots/Title.png" width="100" alt="Title"/></a></td>
+        <td style="padding:5px;"><a class="BlackLink" href="screenshots/Start.png"
+        ><img src="screenshots/Start.png" width="100" alt="Start"/></a></td>
+        <td style="padding:5px;"><a class="BlackLink" href="screenshots/Detonate1.jpg"
+        ><img src="screenshots/Detonate1.jpg" width="100" alt="Detonate1"/></a></td>
+        <td style="padding:5px;"><a class="BlackLink" href="screenshots/Detonate2.jpg"
+        ><img src="screenshots/Detonate2.jpg" width="100" alt="Detonate2"/></a></td>
+    </tr>
+    <tr>
+        <td class="Caption">Title screen</td>
+        <td class="Caption">Game started</td>
+        <td class="Caption">Tile detonated</td>
+        <td class="Caption">After detonation</td>
+    </tr>
 </table>
 
-<h2>J2SE</h2>
+<h2>Hiscore</h2>
 
-<h3 class="Tight"> :: <a href="IntensiTris.jnlp">IntensiTris WebStart</a> :: Run IntensiTris via Java Web Start :: </h3>
+<p>
+    Check out the <a href="hiscore/view.rb">HISCORE</a>.
+</p>
 
-<h3 class="Tight"> :: <a href="applet.html">IntensiTris Applet</a> :: Run IntensiTris inside your browser :: </h3>
+<h2>WebStart</h2>
+
+<p>
+    J2SE build for running IntensiTris via Java Web Start. Requires Java
+    Runtime Environment 1.4 or later. Uses my RunME J2ME emulation layer.
+    Includes full-screen support (Alt-Enter).
+</p>
+
+<h3 class="Tight"> :: <a href="IntensiTris.jnlp">WebStart IntensiTris</a> :: Run IntensiTris via Java Web Start :: </h3>
 
 <h3>Controls</h3>
 
 <table style="margin:2em;margin-top:0;border:solid;" border="1">
     <tr><td>Key</td><td>Function</td></tr>
-    <tr><td>UP</td><td>Rotate tile</td></tr>
-    <tr><td>DOWN</td><td>Move tile down</td></tr>
-    <tr><td>LEFT/RIGHT</td><td>Move tile left/right</td></tr>
-    <tr><td>SPACE</td><td>Drop tile</td></tr>
-    <tr><td>COMMA</td><td>Left softkey (bottom left menu action)</td></tr>
-    <tr><td>DOT</td><td>Right softkey (bottom right menu action)</td></tr>
+    <tr><td>UP or W</td><td>Rotate tile</td></tr>
+    <tr><td>DOWN or S</td><td>Move tile down</td></tr>
+    <tr><td>LEFT/RIGHT or A/D</td><td>Move tile left/right</td></tr>
+    <tr><td>SPACE or Q</td><td>Drop tile</td></tr>
+    <tr><td>RETURN or E</td><td>Detonate tile</td></tr>
+    <tr><td>COMMA or F1</td><td>Left softkey (bottom left menu action)</td></tr>
+    <tr><td>DOT or F2</td><td>Right softkey (bottom right menu action)</td></tr>
 </table>
-
 
 <h2>J2ME</h2>
 
@@ -78,41 +90,46 @@
     <strong>NOTE:</strong> All versions assume a screen size of 176x208 pixels.
     The engine will, however, adapt the screen layout as good as possible to
     the device specific screen size. Unfortunately this results in several
-    GFX/UI glitches.
+    GFX/UI glitches. This scaling feature can be turned off by a configuration
+    value. See the release info below for more information.
 </p>
 
 <p>
     If you want a build for your specific phone and/or screen size just send
-    me an email to IntensiTris AT IntensiCode DOT com. I'll see what I can do
+    me an email to IntensiTris AT IntensiCode DOT net. I'll see what I can do
     for you. (Or just wait until I have released this thing on JavaForge and
     then use it to build a device-specific version yourself.)
 </p>
 
-<p>
-    Reference build for a generic CLDC10 MIDP2 J2ME device.
-</p>
-
-<h3 class="Tight"> :: <a href="release/IntensiTris-Generic_CLDC10_MIDP2-SimpleTris.jad">JAD</a> :: <a href="release/IntensiTris-Generic_CLDC10_MIDP2-SimpleTris.jar">JAR</a> :: Simple Edition :: </h3>
-<h3 class="Tight"> :: <a href="release/IntensiTris-Generic_CLDC10_MIDP2-IntensiTris.jad">JAD</a> :: <a href="release/IntensiTris-Generic_CLDC10_MIDP2-IntensiTris.jar">JAR</a> :: Fancy Edition :: </h3>
-<h3 class="Tight"> :: <a href="release/IntensiTris-Generic_CLDC10_MIDP2-IntensiTres.jad">JAD</a> :: <a href="release/IntensiTris-Generic_CLDC10_MIDP2-IntensiTres.jar">JAR</a> :: IntensiTres Edition :: </h3>
+<h3>Release Info</h3>
 
 <p>
-    Reference build for a NOKIA UI compatible CLDC10 MIDP2 J2ME device.
-    (This includes Sony Ericsson devices like K750, K700, etc.)
+    There are a few - more or less generic - J2ME releases to be found
+    <a href="release">here</a>.
 </p>
-
-<h3 class="Tight"> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP2_NOKIA-SimpleTris.jad">JAD</a> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP2_NOKIA-SimpleTris.jar">JAR</a> :: Simple Edition :: </h3>
-<h3 class="Tight"> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP2_NOKIA-IntensiTris.jad">JAD</a> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP2_NOKIA-IntensiTris.jar">JAR</a> :: Fancy Edition :: </h3>
-<h3 class="Tight"> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP2_NOKIA-IntensiTres.jad">JAD</a> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP2_NOKIA-IntensiTres.jar">JAR</a> :: IntensiTres Edition :: </h3>
 
 <p>
-    Experimental build for a NOKIA UI compatible CLDC10 MIDP1 J2ME device.
-    This has some serious issues because of missing alpha support.
+    BasicTris is a version of the game that uses minimal GFX to allow running
+    the game on devices like the RAZR.
 </p>
 
-<h3 class="Tight"> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP1_NOKIA-SimpleTris.jad">JAD</a> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP1_NOKIA-SimpleTris.jar">JAR</a> :: Simple Edition :: </h3>
-<h3 class="Tight"> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP1_NOKIA-IntensiTris.jad">JAD</a> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP1_NOKIA-IntensiTris.jar">JAR</a> :: Fancy Edition :: </h3>
-<h3 class="Tight"> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP1_NOKIA-IntensiTres.jad">JAD</a> :: <a href="release/IntensiTris-Nokia_CLDC10_MIDP1_NOKIA-IntensiTres.jar">JAR</a> :: IntensiTres Edition :: </h3>
+<p>
+    IntensiTris is available in three versions:
+</p>
+
+<ul>
+    <li><strong>IntensiTris</strong> has all GFX and FX and uses the skin scaling feature to adapt to different screen sizes.</li>
+    <li><strong>IntensiTres</strong> uses <a href="http://www.trescabezas.de">Tres Cabezas</a> graphics. No skin scaling.</li>
+    <li><strong>SimpleTris</strong> has no background graphics and no skin scaling.</li>
+</ul>
+
+<h3>Recommended Downloads</h3>
+
+<ul>
+    <li><a href="release/IntensiTris-Generic_CLDC10_MIDP2-IntensiTris.jar">IntensiTris Generic MIDP2</a> for high-end devices</li>
+    <li><a href="release/IntensiTris-Generic_CLDC10_MIDP2-SimpleTris.jar">SimpleTris Generic MIDP2</a> for weaker devices</li>
+    <li><a href="release/BasicTris-Generic_CLDC10_MIDP2-Small.jar">BasicTris Generic MIDP2</a> for crap devices</li>
+</ul>
 
 <h3>Controls</h3>
 
@@ -122,12 +139,40 @@
     <tr><td>DOWN or 8</td><td>Move tile down</td></tr>
     <tr><td>LEFT/RIGHT or 4/6</td><td>Move tile left/right</td></tr>
     <tr><td>STAR</td><td>Drop tile</td></tr>
+    <tr><td>POUND</td><td>Detonate tile</td></tr>
     <tr><td>LEFT SOFKEY</td><td>Left softkey (bottom left menu action)</td></tr>
     <tr><td>RIGHT SOFTKEY</td><td>Right softkey (bottom right menu action)</td></tr>
 </table>
 
 
 <h2>History</h2>
+
+<h3>2006/07/29</h3>
+<ul>
+    <li>Updated this site to give more info on the J2ME releases.</li>
+    <li>Added a Recommended Downloads section.</li>
+</ul>
+
+<h3>2006/07/25</h3>
+<ul>
+    <li>Fixed more minor issues found after testing WebStart and J2ME versions.</li>
+    <li>Added detonate timer display.</li>
+</ul>
+
+<h3>2006/07/24</h3>
+<ul>
+    <li>Added online and local hiscore. (No name input screen, yet!)</li>
+</ul>
+
+<h3>2006/07/12</h3>
+<ul>
+    <li>Added fullscreen toggle (Alt-Enter).</li>
+</ul>
+
+<h3>2006/07/12</h3>
+<ul>
+    <li>Dropped ME4SE and implemented a faster J2ME layer using a VolatileImage buffer.</li>
+</ul>
 
 <h3>2006/07/07</h3>
 <ul>
