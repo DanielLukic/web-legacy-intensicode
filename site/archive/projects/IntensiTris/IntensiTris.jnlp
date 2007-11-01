@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<jnlp spec="1.0+" codebase="http://www.intensicode.net/projects/IntensiTris2/" href="IntensiTris.jnlp">
+<jnlp spec="1.0+" codebase="http://www.intensicode.net/projects/IntensiTris" href="IntensiTris.jnlp">
 
     <information>
         <title>IntensiTris</title>

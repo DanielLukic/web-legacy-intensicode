@@ -16,78 +16,92 @@
   </head>
 
   <body>
-    <h1 class="sectiontitle">www.intensicode.net</h1>
-    <p>Because intensive coding rocks!</p>
+    <div class="header">
+      <div class="title">IntensiCode</div>
+      <div class="subtitle">Because intensive coding rocks!</div>
+    </div>
 
-    <table width="100%">
-      <tr>
-        <td width="30%">
-          <h2 style="margin-left:0mm;">Projects</h2>
-          <pre class="box"> :: <a href="projects/IntensiTris/index.html"><img src="images/IntensiTris.jpg" width="30mm" height="30mm" /></a> :: <a href="projects/IntensiTris/index.html">IntensiTris</a> :: </pre>
-          <pre class="box"> :: <a href="projects/IntensiBlast/index.html"><img src="images/IntensiBlast.png" width="30mm" height="30mm" /></a> :: <a href="projects/IntensiBlast/index.html">IntensiBlast</a> :: </pre>
-          <pre class="box"> :: <a href="projects/BreakOut/index.html"><img src="images/BreakOut.png" width="30mm" height="30mm" /></a> :: <a href="projects/BreakOut/index.html">BreakOut</a> :: </pre>
-          <div style="margin-left:10mm;"><a href="projects/index.html">Show all projects</a></div>
+    <div class="info">
+      <div class="section">
+        <div class="title">Links</div>
+        <div class="link"><a href="http://www.eeanee.com"><img class="thumbnail" src="images/Eeanee.png"/></a></div>
+        <div class="link"><a href="http://www.psychocell.com"><img class="thumbnail" src="images/Psychocell.gif"/></a></div>
+        <div class="link"><a href="http://www.berlinfactor.com"><img class="thumbnail" src="images/Bx.png"/></a></div>
+        <div class="link"><a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=221"><img border="0" alt="Foxkeh banners for Firefox 2" title="Foxkeh banners for Firefox 2" src="http://sfx-images.mozilla.org/affiliates/Buttons/firefox2/foxkeh-fx2-125x125.png"/></a></div>
+      </div>
 
-          <h2 style="margin-left:0mm;">Links</h2>
-          <pre class="box"> :: <a href="http://www.berlinfactor.com">The.Berlin.Factor</a> :: </pre>
+      <div class="section">
+        <div class="title">Contact</div>
+        <div class="link"><a href="mailto:tfdj [at] intensicode [dot] net">The.French.DJ</a></div>
+      </div>
 
-          <h2 style="margin-left:0mm;">Contact</h2>
-          <pre class="box"> :: <a href="mailto:tfdj [at] intensicode [dot] de">The.French.DJ</a> :: </pre>
-
-          <h2 style="margin-left:0mm;">Credits</h2>
-          <p style="margin-left:10mm">Site style based on CSS found at<br /><a href="http://www.joseki.org/protocol.html">Joseki: RDF WebAPI</a>.</p>
-
-          <h2 style="margin-left:0mm;">Donate</h2>
-<form style="margin-left:10mm" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+      <div class="section">
+        <div class="title">Donate</div>
+        <div class="link"><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
 <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
 <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
-"></form>
-        </td>
+"></form></div>
+      </div>
+    </div>
 
-        <td width="70%">
-          <h2 style="margin-left:0mm;">News</h2>
+    <div class="content">
+      <div class="section">
+        <div class="title">Active Projects<div class="subtitle">(J2ME)</div></div>
+        <div class="project">
+          <div class="thumb">
+            <a href="projects/IntensiTris/index.html"><img class="thumbnail" src="images/IntensiTris.png"/></a>
+          </div>
+          <div class="name">
+            <a href="projects/IntensiTris/index.html">IntensiTris</a>
+          </div>
+        </div>
+        <div class="project">
+          <div class="thumb">
+            <a href="projects/Galaxina/index.html"><img class="thumbnail" src="images/Galaxina.png"/></a>
+          </div>
+          <div class="name">
+            <a href="projects/Galaxina/index.html">Galaxina</a>
+          </div>
+        </div>
+      </div>
 
-          <h3 class="NewsTag">2006-07-08 <strong>INTENSITRIS - J2ME TETRIS</strong></h3>
-          <div class="NewsEntry">Check out the online playable IntensiTris. Developed from a bet:
-          Can you implement a Tetris game within one day? For J2ME?</div>
+      <div class="section">
+        <div class="title">Abandoned Projects<div class="subtitle">(Symbian)</div></div>
+        <div class="project">
+          <div class="thumb">
+            <a href="projects/IntensiBlast/index.html"><img class="thumbnail" src="images/IntensiBlast.png"/></a>
+          </div>
+          <div class="name">
+            <a href="projects/IntensiBlast/index.html">IntensiBlast</a>
+          </div>
+        </div>
+        <div class="project">
+          <div class="thumb">
+            <a href="projects/BreakOut/index.html"><img class="thumbnail" src="images/BreakOut.png"/></a>
+          </div>
+          <div class="name">
+            <a href="projects/BreakOut/index.html">BreakOut</a>
+          </div>
+        </div>
+        <div class="project">
+          <div class="thumb">
+            <a href="projects/RockDash/index.html"><img class="thumbnail" src="images/RockDash.png"/></a>
+          </div>
+          <div class="name">
+            <a href="projects/RockDash/index.html">RockDash</a>
+          </div>
+        </div>
+      </div>
 
-          <h3 class="NewsTag">2006-05-04 <strong>SIMPLESYNTAX IDEA PLUGIN</strong></h3>
-          <div class="NewsEntry">Added my 'pet' project of the last few days to the active projects:
-          <a href="projects/SimpleSyntax/index.html">SimpleSyntax</a>. Provides generic syntax
-          highlighting (for eg Ruby, Python, etc) in <a href="http://www.intellij.com">Intelli/J IDEA</a>.</div>
-
-          <h3 class="NewsTag">2004-06-20 <strong>SITE UPDATE</strong></h3>
-          <div class="NewsEntry">Reshuffled my list of 'active' projects. Whatever that means.. :)
-          Enjoy the games and drop me a note if you like them or have some ideas or whatever..</div>
-
-          <h3 class="NewsTag">2004-01-25 <strong>NEW PROJECT</strong></h3>
-          <div class="NewsEntry">Finally! I started working on an updated release of my Symbian Series 60
-          MOD Player. Go <a href="projects/IntensiMod/index.html">here</a> for details. But please be patient,
-          I'm really busy right now with CeBit approaching..</div>
-
-          <h3 class="NewsTag">2003-12-19 <strong>MAJOR RELEASE</strong></h3>
-          <div class="NewsEntry">Updated <a href="projects/IntensiBlast/index.html">IntensiBlast</a>.
-          Multi-Player Mode working for two players now. All "extras" working. Some nice "diseases" available.
-          Third generation AI (called CI.. well..) kicking your azz!</div>
-
-          <h3 class="NewsTag">2003-09-20</h3>
-          <div class="NewsEntry">Updated <a href="projects/IntensiBlast/index.html">IntensiBlast</a>.
-          Added the <a href="http://www.berlinfactor.com">Bx</a> <a href="http://www.berlinfactor.com/Symbian.Section/SoundSystem.html">Sound System</a> for playing a title MOD and in-game sounds.</div>
-
-          <h3 class="NewsTag">2003-08-18</h3>
-          <div class="NewsEntry">Updated <a href="projects/IntensiBlast/index.html">IntensiBlast</a>.
-          Multiplayer Mode is working now. The game is still in development, but playable!</div>
-
-          <h3 class="NewsTag">2003-08-14</h3>
-          <div class="NewsEntry">First release of <a href="projects/IntensiBlast/index.html">IntensiBlast</a>.</div>
-        </td>
-      </tr>
-    </table>
-    <p/>
-    <hr>
-    <p class="footer">Last Update: 2006-05-04</p>
+      <div class="section">
+        <div class="title">Archive</div>
+        <div class="project">
+          <a href="archive/index.html">Visit the 2005 edition of this site.</a>
+        </div>
+      </div>
+    </div>
   </body>
 
 </html>

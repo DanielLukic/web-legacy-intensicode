@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<jnlp spec="1.0+" codebase="http://www.intensicode.net/projects/IntensiTris2/" href="IntensiTris.jnlp">
+<jnlp spec="1.0+" codebase="http://www.intensicode.net/projects/Galaxian" href="Galaxian.jnlp">
 
     <information>
-        <title>IntensiTris</title>
+        <title>Galaxian</title>
         <vendor>IntensiCode / The.Berlin.Factor</vendor>
         <description>Another Tetris no one needs..</description>
         <icon href="bx.png"/>
@@ -17,11 +17,11 @@
 
     <resources>
         <j2se version="1.4+"/>
-        <jar href="IntensiTris.jar"/>
+        <jar href="Galaxian.jar"/>
     </resources>
 
     <application-desc main-class="net.intensicode.runme.MIDletLauncher">
-        <argument>midlet=net.intensicode.IntensiTris</argument>
+        <argument>midlet=net.intensicode.Galaxian</argument>
     </application-desc>
 
 </jnlp>

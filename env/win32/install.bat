@@ -1,8 +1,0 @@
-@ECHO OFF
-
-SET INSTALL_DATA=env/install
-SET INSTALL_WIN32=%INSTALL_DATA%/win32
-SET INSTALL_GEMS=%INSTALL_DATA%/gems
-
-sh %SCRIPTS%\install.sh %ENV%\ruby %INSTALL_WIN32%/ruby.rar
-sh %SCRIPTS%\install_gems.sh %INSTALL_GEMS%
