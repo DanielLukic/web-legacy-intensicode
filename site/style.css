@@ -66,6 +66,8 @@ li {
     border-right-color:#8888A8;
     border-bottom-color:#8888A8;
     width:8em;
+    padding-left:0.4em;
+    padding-top:0.2em;
 }
 
 .link {
@@ -86,6 +88,8 @@ li {
     border-right-color:#88A888;
     border-bottom-color:#88A888;
     width:15em;
+    padding-left:0.4em;
+    padding-top:0.2em;
 }
 
 .section>.title>.subtitle {
